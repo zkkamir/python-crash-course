@@ -1,3 +1,3 @@
 # python-crash-course
 
-## A repository to follow along woth the project of the book Python Crash Course by Eric Matthes.
+## A repository to follow along with the projects of the book "Python Crash Course" by Eric Matthes.
