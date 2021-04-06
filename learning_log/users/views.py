@@ -1,4 +1,3 @@
-from django import forms
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -6,6 +5,10 @@ from django.contrib.auth.forms import UserCreationForm
 
 def register(request):
     """Register a new user."""
+    # Do not let a logged in user make an account.
+    if request.user.is_authenticated:
+        return redirect("learning_logs:index")
+
     if request.method != "POST":
         # Display blank registration form.
         form = UserCreationForm()
